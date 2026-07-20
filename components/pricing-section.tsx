@@ -1,83 +1,98 @@
-import { Check, Sparkles } from "lucide-react"
-import { Button } from "@/components/ui/button"
-
-const features = [
-  "Unlimited Access to DeepFilterNet & RNNoise Models",
-  "Local Whisper Transcription",
-  "Advanced DSP Dashboard",
-  "Dual-View Spectrum Analyzer",
-  "Free Updates for Life",
-  "15-Day Free Trial",
-  "30-Day Money-Back Guarantee",
+const included = [
+  "DeepFilterNet & RNNoise AI models",
+  "Local Whisper transcription (offline)",
+  "Advanced DSP dashboard",
+  "Dual-view spectrum analyzer",
+  "Auto-Notch Filter",
+  "Voice Boost EQ",
+  "Free updates for life",
+  "30-day money-back guarantee",
 ]
 
 export function PricingSection() {
   return (
-    <section id="pricing" className="border-t border-border/40 py-20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Professional Audio. Hobbyist Price.
-          </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            Hardware DSP speakers cost $200+. Subscription services cost $15/month.
-            <br />
-            ClearBand AI is software that you <span className="text-amber-500 font-semibold">own</span>.
-          </p>
-        </div>
+    <section id="pricing" className="py-24 border-t border-border" style={{ backgroundColor: "#0D0900" }}>
+      <div className="mx-auto max-w-6xl px-6">
+        <p className="text-center text-xs font-bold uppercase tracking-widest mb-4" style={{ color: "var(--amber)" }}>
+          Pricing
+        </p>
+        <h2 className="text-center text-3xl font-bold text-foreground sm:text-4xl text-balance">
+          Professional Audio,{" "}
+          <em style={{ color: "var(--amber)", fontFamily: "Georgia, serif" }}>Hobbyist&nbsp;Price.</em>
+        </h2>
+        <p className="mt-4 text-center text-sm text-muted-foreground max-w-lg mx-auto">
+          Hardware DSP processors cost $200+. Subscription services run $15/month forever.
+          ClearBand AI is software you <strong className="text-foreground">own</strong>.
+        </p>
 
-        <div className="mx-auto mt-16 max-w-lg">
-          {/* Pricing Card */}
-          <div className="relative overflow-hidden rounded-2xl border-2 border-amber-500 bg-card">
-            {/* Highlight badge */}
-            <div className="absolute top-0 right-0 rounded-bl-xl bg-amber-500 px-4 py-1 text-sm font-semibold text-background">
-              BEST VALUE
+        {/* Card */}
+        <div className="mx-auto mt-14 max-w-md">
+          <div
+            className="relative rounded-2xl border-2 overflow-hidden"
+            style={{ borderColor: "var(--amber)", backgroundColor: "var(--surface-1)" }}
+          >
+            {/* Amber glow behind card */}
+            <div
+              className="pointer-events-none absolute inset-0"
+              style={{ background: "radial-gradient(ellipse at 50% 0%, rgba(232,160,32,0.10) 0%, transparent 65%)" }}
+            />
+
+            {/* Badge */}
+            <div
+              className="absolute top-0 right-0 px-4 py-1 text-xs font-black uppercase tracking-widest rounded-bl-xl"
+              style={{ backgroundColor: "var(--amber)", color: "#0D0900" }}
+            >
+              One-Time Buy
             </div>
 
-            <div className="p-8">
-              <div className="flex items-center gap-2">
-                <Sparkles className="h-5 w-5 text-amber-500" />
-                <span className="text-lg font-semibold text-foreground">Lifetime License</span>
+            <div className="relative p-8">
+              <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-3">Lifetime License</p>
+
+              {/* Price */}
+              <div className="flex items-end gap-3 mb-1">
+                <span className="text-7xl font-black text-foreground leading-none" style={{ letterSpacing: "-0.03em" }}>
+                  $29
+                </span>
+                <span className="text-sm text-muted-foreground pb-2">one-time payment</span>
               </div>
+              <p className="text-xs font-semibold mb-8" style={{ color: "var(--amber)" }}>
+                Includes 15-day free trial &nbsp;·&nbsp; No credit card required
+              </p>
 
-              <div className="mt-4 flex items-baseline gap-2">
-                <span className="text-5xl font-bold text-foreground">$29</span>
-                <span className="text-muted-foreground">one-time payment</span>
-              </div>
-
-              <p className="mt-2 text-sm text-amber-500 font-medium">Includes 15-day free trial</p>
-
-              <ul className="mt-8 space-y-4">
-                {features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-3">
-                    <Check className="mt-0.5 h-5 w-5 flex-shrink-0 text-amber-500" />
-                    <span className="text-foreground">{feature}</span>
+              {/* Feature list */}
+              <ul className="space-y-3 mb-8">
+                {included.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm text-foreground">
+                    <svg width="16" height="16" viewBox="0 0 16 16" className="flex-shrink-0 mt-px">
+                      <circle cx="8" cy="8" r="7" fill="rgba(232,160,32,0.15)" stroke="rgba(232,160,32,0.5)" strokeWidth="1" />
+                      <path d="M5 8l2 2 4-4" stroke="var(--amber)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                    </svg>
+                    {item}
                   </li>
                 ))}
               </ul>
 
-              <Button className="mt-8 w-full bg-amber-500 py-6 text-lg text-background hover:bg-amber-600">
+              {/* CTA */}
+              <a
+                href="#"
+                className="block w-full rounded-lg py-4 text-center text-sm font-black uppercase tracking-widest transition-opacity hover:opacity-90"
+                style={{ backgroundColor: "var(--amber)", color: "#0D0900" }}
+              >
                 Start Free Trial
-              </Button>
-
-              <p className="mt-4 text-center text-sm text-muted-foreground">No credit card required for trial</p>
+              </a>
+              <p className="mt-3 text-center text-xs text-muted-foreground">
+                No credit card required to start
+              </p>
             </div>
           </div>
 
-          {/* Trust badges */}
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
-            <div className="flex items-center gap-2">
-              <Check className="h-4 w-4 text-emerald-500" />
-              <span>No Subscriptions</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Check className="h-4 w-4 text-emerald-500" />
-              <span>No Cloud Required</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Check className="h-4 w-4 text-emerald-500" />
-              <span>Instant Download</span>
-            </div>
+          {/* Trust row */}
+          <div className="mt-8 flex flex-wrap justify-center gap-x-8 gap-y-2 text-xs text-muted-foreground">
+            {["No Subscriptions", "No Cloud Required", "Instant Download", "30-Day Guarantee"].map((t) => (
+              <span key={t} className="flex items-center gap-1.5">
+                <span style={{ color: "#3DC87A" }}>✓</span> {t}
+              </span>
+            ))}
           </div>
         </div>
       </div>

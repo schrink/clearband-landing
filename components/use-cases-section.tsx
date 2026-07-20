@@ -1,67 +1,63 @@
-import { Globe, Trophy, Mountain } from "lucide-react"
-
 const useCases = [
   {
-    icon: Globe,
     title: "For DX Chasers",
-    description: "Pull weak signals out of the mud that are invisible on the waterfall.",
-    color: "text-blue-500",
-    bg: "bg-blue-500/10",
-    border: "border-blue-500/30",
+    description:
+      "Pull weak signals out of the mud that are invisible on the waterfall. The AI reconstructs voice harmonics even at S3.",
     image: "/high-end-hf-transceiver-icom-ic-7851-radio-dark-ba.jpg",
+    tag: "DX / HF",
   },
   {
-    icon: Trophy,
     title: "For Contesters",
-    description: "Reduce brain fatigue. Listen for hours without the constant hiss of the noise floor.",
-    color: "text-amber-500",
-    bg: "bg-amber-500/10",
-    border: "border-amber-500/30",
+    description:
+      "Reduce ear fatigue across 48-hour runs. The noise floor drops so far you can hear callsigns in the sideband splatter.",
     image: "/contest-station-multiple-monitors-radio-equipment-.jpg",
+    tag: "Contesting",
   },
   {
-    icon: Mountain,
-    title: "For POTA/SOTA",
-    description: '"Eco Mode" runs efficiently on older laptops, extending your battery life in the field.',
-    color: "text-emerald-500",
-    bg: "bg-emerald-500/10",
-    border: "border-emerald-500/30",
+    title: "For POTA / SOTA",
+    description:
+      'Eco Mode sips just 3% CPU — runs all day on a field laptop. Pack light, hear everything.',
     image: "/portable-ham-radio-qrp-setup-outdoor-nature-mounta.jpg",
+    tag: "Portable Ops",
   },
 ]
 
 export function UseCasesSection() {
   return (
-    <section className="border-t border-border/40 py-20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Built For Operators</h2>
-          <p className="mt-4 text-lg text-muted-foreground">Whether you&apos;re at home or in the field</p>
-        </div>
+    <section className="py-24 border-t border-border" style={{ backgroundColor: "var(--surface-2)" }}>
+      <div className="mx-auto max-w-6xl px-6">
+        <p className="text-center text-xs font-bold uppercase tracking-widest mb-4" style={{ color: "var(--amber)" }}>
+          Use Cases
+        </p>
+        <h2 className="text-center text-3xl font-bold text-foreground sm:text-4xl text-balance">
+          Whether you&apos;re at home or in the field
+        </h2>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-3">
+        <div className="mt-14 grid gap-6 md:grid-cols-3">
           {useCases.map((useCase) => (
             <div
               key={useCase.title}
-              className={`group overflow-hidden rounded-xl border ${useCase.border} bg-card transition-all hover:border-amber-500/50`}
+              className="group overflow-hidden rounded-xl border"
+              style={{ borderColor: "var(--border)", backgroundColor: "var(--surface-1)" }}
             >
               {/* Gear image */}
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-44 overflow-hidden">
                 <img
-                  src={useCase.image || "/placeholder.svg"}
+                  src={useCase.image}
                   alt={useCase.title}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
-                <div
-                  className={`absolute bottom-4 left-4 flex h-12 w-12 items-center justify-center rounded-xl ${useCase.bg} ${useCase.color}`}
+                <div className="absolute inset-0" style={{ background: "linear-gradient(to top, var(--surface-1) 0%, transparent 60%)" }} />
+                <span
+                  className="absolute top-3 left-3 rounded px-2 py-0.5 text-xs font-bold uppercase tracking-widest"
+                  style={{ backgroundColor: "rgba(232,160,32,0.15)", color: "var(--amber)", border: "1px solid rgba(232,160,32,0.3)" }}
                 >
-                  <useCase.icon className="h-6 w-6" />
-                </div>
+                  {useCase.tag}
+                </span>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-foreground">{useCase.title}</h3>
-                <p className="mt-2 text-muted-foreground">{useCase.description}</p>
+                <h3 className="text-base font-bold text-foreground mb-2">{useCase.title}</h3>
+                <p className="text-sm leading-relaxed text-muted-foreground">{useCase.description}</p>
               </div>
             </div>
           ))}
