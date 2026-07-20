@@ -1,3 +1,5 @@
+"use client"
+
 import { Zap, FileText, BarChart3, SlidersHorizontal, Shield, Radio, Settings, Waves } from "lucide-react"
 
 const features = [
