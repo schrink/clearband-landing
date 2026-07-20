@@ -232,7 +232,11 @@ export function WaitlistModal() {
               )}
 
               <p className="mt-5 text-center text-xs text-muted-foreground">
-                Offer for waitlist members only · Windows · macOS · Linux
+                By joining you agree to our{" "}
+                <a href="/privacy" className="underline underline-offset-2 hover:text-foreground">
+                  Privacy Policy
+                </a>
+                . Offer for waitlist members only.
               </p>
             </>
           )}

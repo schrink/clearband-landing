@@ -15,6 +15,12 @@ export function Footer() {
 
           {/* Links */}
           <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-muted-foreground">
+            <a href="/privacy" className="transition-colors hover:text-foreground">
+              Privacy Policy
+            </a>
+            <a href="/terms" className="transition-colors hover:text-foreground">
+              Terms of Service
+            </a>
             <a href="mailto:contact@clearbandai.app" className="transition-colors hover:text-foreground">
               Contact
             </a>
