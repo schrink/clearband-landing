@@ -13,6 +13,17 @@ export const metadata: Metadata = {
   description:
     "The first Hybrid Chain audio processor for Amateur Radio. Studio-grade noise reduction, local AI transcription, and surgical DSP—running entirely on your PC. $29 lifetime license.",
   keywords: ["amateur radio", "ham radio", "noise reduction", "DSP", "AI audio", "QRN", "DX", "ClearBand"],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   themeColor: "#0D0900",
   generator: "v0.app",
   icons: {
