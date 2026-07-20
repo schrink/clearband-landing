@@ -12,19 +12,21 @@ export function HeroSection() {
       />
 
       <div className="relative mx-auto max-w-6xl px-6">
-        {/* Badge */}
-        <div className="mb-8 flex justify-center">
-          <span
-            className="inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-xs font-semibold uppercase tracking-widest"
-            style={{
-              borderColor: "rgba(232,160,32,0.35)",
-              color: "var(--amber)",
-              backgroundColor: "rgba(232,160,32,0.08)",
-            }}
-          >
-            <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "var(--amber)" }} />
-            No Subscriptions. No Cloud. 100% Offline.
-          </span>
+        {/* Trust line */}
+        <div className="mb-8 flex items-center justify-center gap-0">
+          {["No Subscriptions", "No Cloud", "100% Offline"].map((item, i) => (
+            <span key={item} className="flex items-center">
+              {i > 0 && (
+                <span className="mx-3 h-3 w-px block" style={{ backgroundColor: "rgba(232,160,32,0.3)" }} />
+              )}
+              <span
+                className="text-xs font-semibold uppercase tracking-widest"
+                style={{ color: "var(--amber)" }}
+              >
+                {item}
+              </span>
+            </span>
+          ))}
         </div>
 
         {/* Headline */}
