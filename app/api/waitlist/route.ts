@@ -90,3 +90,13 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Internal server error" }, { status: 500 })
   }
 }
+
+export async function GET() {
+  try {
+    const count = await redis.hlen("waitlist:emails")
+    return NextResponse.json({ count })
+  } catch (error) {
+    console.error("Waitlist count error:", error)
+    return NextResponse.json({ error: "Internal server error" }, { status: 500 })
+  }
+}
