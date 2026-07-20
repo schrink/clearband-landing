@@ -3,8 +3,8 @@
 import { useWaitlist } from "@/components/waitlist-context"
 
 const included = [
-  "DeepFilterNet & RNNoise AI models",
-  "Local Whisper transcription (offline)",
+  "Two AI processing engines",
+  "Local offline speech transcription",
   "Advanced DSP dashboard",
   "Dual-view spectrum analyzer",
   "Auto-Notch Filter",

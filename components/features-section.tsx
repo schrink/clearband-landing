@@ -10,8 +10,8 @@ const features = [
   },
   {
     icon: FileText,
-    title: "AI Log Assistant",
-    description: "Local Whisper transcription captures callsigns in real time during pile-ups.",
+    title: "AI Voice Transcription",
+    description: "Offline speech recognition captures callsigns in real time during pile-ups.",
   },
   {
     icon: BarChart3,
@@ -31,7 +31,7 @@ const features = [
   {
     icon: Waves,
     title: "Spectral Subtraction",
-    description: "Drops broadband hiss 6-10 dB before the AI stage for maximum gain.",
+    description: "Drops broadband hiss before the AI stage for maximum clean gain.",
   },
   {
     icon: Settings,
@@ -76,10 +76,10 @@ export function FeaturesSection() {
         {/* AI Models */}
         <div className="mt-20">
           <p className="text-center text-xs font-bold uppercase tracking-widest mb-4" style={{ color: "var(--amber)" }}>
-            Selectable AI Models
+            Selectable Processing Modes
           </p>
           <h3 className="text-center text-2xl font-bold text-foreground text-balance">
-            Choose the right tool for your band
+            Choose the right mode for your band
           </h3>
 
           <div className="mx-auto mt-10 grid max-w-3xl gap-6 md:grid-cols-2">
@@ -92,7 +92,7 @@ export function FeaturesSection() {
                 <span className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: "#3DC87A" }} />
                 <span className="font-mono text-base font-bold" style={{ color: "#3DC87A" }}>10 Meter Audio</span>
               </div>
-              <p className="text-xs text-muted-foreground mb-4">Eco Mode · RNNoise Engine</p>
+              <p className="text-xs text-muted-foreground mb-4">Fast &amp; Efficient · Lightweight Engine</p>
               <ul className="space-y-2 text-sm text-foreground">
                 {["Ultra-low CPU usage", "Perfect for field laptops", "Battery-friendly operation", "Aggressive noise gating"].map((i) => (
                   <li key={i} className="flex items-start gap-2">
@@ -112,7 +112,7 @@ export function FeaturesSection() {
                 <span className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: "var(--amber)" }} />
                 <span className="font-mono text-base font-bold" style={{ color: "var(--amber)" }}>Deep Band Studio</span>
               </div>
-              <p className="text-xs text-muted-foreground mb-4">Studio Mode · DeepFilterNet Engine</p>
+              <p className="text-xs text-muted-foreground mb-4">Deep &amp; High Quality · Premium Engine</p>
               <ul className="space-y-2 text-sm text-foreground">
                 {["High-fidelity reconstruction", 'Restores "air" and highs', "Natural voice preservation", "Best for home stations"].map((i) => (
                   <li key={i} className="flex items-start gap-2">

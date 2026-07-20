@@ -7,9 +7,9 @@ const steps = [
   },
   {
     number: "02",
-    title: "Select your AI model",
+    title: "Choose your processing level",
     description:
-      "Choose Eco Mode (RNNoise) for low-power laptops or Studio Mode (DeepFilterNet) for maximum fidelity at home.",
+      "Fast & Efficient for field laptops and battery operation, or Deep & High Quality for maximum fidelity at home.",
   },
   {
     number: "03",
