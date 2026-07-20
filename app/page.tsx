@@ -8,20 +8,25 @@ import { PricingSection } from "@/components/pricing-section"
 import { TechSpecsSection } from "@/components/tech-specs-section"
 import { Footer } from "@/components/footer"
 import { Navbar } from "@/components/navbar"
+import { WaitlistProvider } from "@/components/waitlist-context"
+import { WaitlistModal } from "@/components/waitlist-modal"
 
 export default function Home() {
   return (
-    <main className="min-h-screen" style={{ backgroundColor: "#0D0900" }}>
-      <Navbar />
-      <HeroSection />
-      <HowItWorks />
-      <FeaturesSection />
-      <UseCasesSection />
-      <GearGallery />
-      <SocialProof />
-      <PricingSection />
-      <TechSpecsSection />
-      <Footer />
-    </main>
+    <WaitlistProvider>
+      <main className="min-h-screen" style={{ backgroundColor: "#0D0900" }}>
+        <Navbar />
+        <HeroSection />
+        <HowItWorks />
+        <FeaturesSection />
+        <UseCasesSection />
+        <GearGallery />
+        <SocialProof />
+        <PricingSection />
+        <TechSpecsSection />
+        <Footer />
+        <WaitlistModal />
+      </main>
+    </WaitlistProvider>
   )
 }

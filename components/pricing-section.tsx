@@ -1,3 +1,7 @@
+"use client"
+
+import { useWaitlist } from "@/components/waitlist-context"
+
 const included = [
   "DeepFilterNet & RNNoise AI models",
   "Local Whisper transcription (offline)",
@@ -10,6 +14,8 @@ const included = [
 ]
 
 export function PricingSection() {
+  const { openWaitlist } = useWaitlist()
+
   return (
     <section id="pricing" className="py-24 border-t border-border" style={{ backgroundColor: "#0D0900" }}>
       <div className="mx-auto max-w-6xl px-6">
@@ -73,13 +79,14 @@ export function PricingSection() {
               </ul>
 
               {/* CTA */}
-              <a
-                href="#"
+              <button
+                type="button"
+                onClick={openWaitlist}
                 className="block w-full rounded-lg py-4 text-center text-sm font-black uppercase tracking-widest transition-opacity hover:opacity-90"
                 style={{ backgroundColor: "var(--amber)", color: "#0D0900" }}
               >
                 Start Free Trial
-              </a>
+              </button>
               <p className="mt-3 text-center text-xs text-muted-foreground">
                 No credit card required to start
               </p>

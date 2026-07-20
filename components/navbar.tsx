@@ -2,9 +2,11 @@
 
 import { useState, useEffect } from "react"
 import { Radio } from "lucide-react"
+import { useWaitlist } from "@/components/waitlist-context"
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
+  const { openWaitlist } = useWaitlist()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24)
@@ -50,13 +52,14 @@ export function Navbar() {
         {/* CTA */}
         <div className="hidden md:flex items-center gap-4">
           <span className="text-xs text-muted-foreground">15-day free trial</span>
-          <a
-            href="#pricing"
+          <button
+            type="button"
+            onClick={openWaitlist}
             className="rounded px-4 py-2 text-xs font-bold uppercase tracking-widest transition-opacity hover:opacity-90"
             style={{ backgroundColor: "var(--amber)", color: "#0D0900" }}
           >
-            Get ClearBand AI
-          </a>
+            Start Free Trial
+          </button>
         </div>
       </div>
     </header>

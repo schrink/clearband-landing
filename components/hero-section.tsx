@@ -1,31 +1,9 @@
 "use client"
 
-import { Loader2, CheckCircle2 } from "lucide-react"
-import { useState, FormEvent } from "react"
+import { useWaitlist } from "@/components/waitlist-context"
 
 export function HeroSection() {
-  const [email, setEmail] = useState("")
-  const [subStatus, setSubStatus] = useState<"idle" | "loading" | "ok" | "error">("idle")
-
-  const handleWaitlist = async (e: FormEvent) => {
-    e.preventDefault()
-    setSubStatus("loading")
-    try {
-      const res = await fetch("/api/waitlist", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
-      })
-      if (res.ok) {
-        setSubStatus("ok")
-        setEmail("")
-      } else {
-        setSubStatus("error")
-      }
-    } catch {
-      setSubStatus("error")
-    }
-  }
+  const { openWaitlist } = useWaitlist()
 
   return (
     <section className="relative overflow-hidden pt-28 pb-24" style={{ backgroundColor: "#0D0900" }}>
@@ -74,13 +52,14 @@ export function HeroSection() {
 
         {/* CTAs */}
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <a
-            href="#pricing"
+          <button
+            type="button"
+            onClick={openWaitlist}
             className="rounded px-8 py-3 text-sm font-bold uppercase tracking-widest transition-opacity hover:opacity-90"
             style={{ backgroundColor: "var(--amber)", color: "#0D0900" }}
           >
             Start Free Trial
-          </a>
+          </button>
           <a
             href="#how-it-works"
             className="rounded border px-8 py-3 text-sm font-medium text-foreground transition-colors hover:border-foreground/50"
@@ -92,45 +71,6 @@ export function HeroSection() {
         <p className="mt-3 text-center text-xs text-muted-foreground">
           Windows &nbsp;·&nbsp; macOS &nbsp;·&nbsp; Linux &nbsp;·&nbsp; 15-day free trial
         </p>
-
-        {/* Waitlist Email Capture */}
-        <div className="mt-8">
-          <form onSubmit={handleWaitlist} className="mx-auto flex max-w-md gap-3">
-            <input
-              type="email"
-              placeholder="Enter your email for early access"
-              value={email}
-              onChange={(e) => { setEmail(e.target.value); setSubStatus("idle") }}
-              required
-              className="flex-1 rounded border bg-transparent px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none"
-              style={{ borderColor: "var(--border)" }}
-            />
-            <button
-              type="submit"
-              disabled={subStatus === "loading" || subStatus === "ok"}
-              className="rounded px-6 py-2.5 text-sm font-bold uppercase tracking-widest transition-opacity hover:opacity-90 disabled:opacity-70"
-              style={{ backgroundColor: "var(--amber)", color: "#0D0900" }}
-            >
-              {subStatus === "loading" ? (
-                <Loader2 className="h-4 w-4 animate-spin" />
-              ) : subStatus === "ok" ? (
-                <CheckCircle2 className="h-4 w-4" />
-              ) : (
-                "Join Waitlist"
-              )}
-            </button>
-          </form>
-          {subStatus === "ok" && (
-            <p className="mt-2 text-center text-sm text-emerald-400">
-              ✓ You're on the list! We'll notify you when ClearBand launches.
-            </p>
-          )}
-          {subStatus === "error" && (
-            <p className="mt-2 text-center text-sm text-red-400">
-              Something went wrong. Please try again.
-            </p>
-          )}
-        </div>
 
         {/* App Screenshot */}
         <div className="relative mx-auto mt-16 max-w-4xl">
