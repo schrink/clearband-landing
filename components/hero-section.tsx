@@ -1,67 +1,90 @@
-import { Button } from "@/components/ui/button"
-import { Download, ArrowRight } from "lucide-react"
-
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden pt-32 pb-20">
-      <div className="absolute inset-0">
-        <img src="/dark-amateur-radio-shack-with-hf-transceiver-equip.jpg" alt="" className="h-full w-full object-cover opacity-30" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background" />
-      </div>
+    <section className="relative overflow-hidden pt-28 pb-24" style={{ backgroundColor: "#0D0900" }}>
+      {/* Subtle radial amber glow behind headline */}
+      <div
+        className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2"
+        style={{
+          width: 700,
+          height: 400,
+          background: "radial-gradient(ellipse at center, rgba(232,160,32,0.08) 0%, transparent 70%)",
+        }}
+      />
 
-      {/* Background gradient */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/2 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-amber-500/10 blur-[120px]" />
-      </div>
-
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl text-center">
-          {/* Badge */}
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/10 px-4 py-1.5 text-sm text-amber-500">
-            <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
+      <div className="relative mx-auto max-w-6xl px-6">
+        {/* Badge */}
+        <div className="mb-8 flex justify-center">
+          <span
+            className="inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-xs font-semibold uppercase tracking-widest"
+            style={{
+              borderColor: "rgba(232,160,32,0.35)",
+              color: "var(--amber)",
+              backgroundColor: "rgba(232,160,32,0.08)",
+            }}
+          >
+            <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "var(--amber)" }} />
             No Subscriptions. No Cloud. 100% Offline.
-          </div>
-
-          {/* Headline */}
-          <h1 className="text-balance text-5xl font-bold tracking-tight text-foreground sm:text-6xl lg:text-7xl">
-            Hear the signal,
-            <br />
-            <span className="text-amber-500">ignore the QRN.</span>
-          </h1>
-
-          {/* Subheadline */}
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl">
-            The first "Hybrid Chain" audio processor for Amateur Radio. Studio-grade noise reduction, local AI
-            transcription, and surgical DSP—running entirely on your PC.
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button size="lg" className="bg-amber-500 px-8 text-background hover:bg-amber-600">
-              <Download className="mr-2 h-5 w-5" />
-              Download Free Trial
-            </Button>
-            <Button size="lg" variant="outline" className="border-border px-8 bg-transparent">
-              Learn More
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-          </div>
-
-          {/* Platform badges */}
-          <p className="mt-4 text-sm text-muted-foreground">Windows / macOS / Linux</p>
+          </span>
         </div>
+
+        {/* Headline */}
+        <h1 className="text-center text-balance font-bold leading-tight text-foreground" style={{ fontSize: "clamp(2.5rem, 6vw, 4.5rem)" }}>
+          Hear the signal,
+          <br />
+          <em className="not-italic font-bold" style={{ color: "var(--amber)", fontFamily: "Georgia, serif", fontStyle: "italic" }}>
+            ignore the QRN.
+          </em>
+        </h1>
+
+        {/* Subheadline */}
+        <p className="mx-auto mt-6 max-w-xl text-center text-base leading-relaxed text-muted-foreground sm:text-lg">
+          The first&nbsp;<strong className="text-foreground font-medium">Hybrid&nbsp;Chain</strong> audio processor
+          for Amateur Radio. Studio-grade noise reduction, local AI transcription, and surgical DSP—running entirely on your PC.
+        </p>
+
+        {/* CTAs */}
+        <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <a
+            href="#pricing"
+            className="rounded px-8 py-3 text-sm font-bold uppercase tracking-widest transition-opacity hover:opacity-90"
+            style={{ backgroundColor: "var(--amber)", color: "#0D0900" }}
+          >
+            Start Free Trial
+          </a>
+          <a
+            href="#how-it-works"
+            className="rounded border px-8 py-3 text-sm font-medium text-foreground transition-colors hover:border-foreground/50"
+            style={{ borderColor: "var(--border)" }}
+          >
+            Learn More
+          </a>
+        </div>
+        <p className="mt-3 text-center text-xs text-muted-foreground">
+          Windows &nbsp;·&nbsp; macOS &nbsp;·&nbsp; Linux &nbsp;·&nbsp; 15-day free trial
+        </p>
 
         {/* App Screenshot */}
         <div className="relative mx-auto mt-16 max-w-4xl">
-          <div className="overflow-hidden rounded-xl border border-border/50 bg-card shadow-2xl shadow-amber-500/5">
+          <div
+            className="overflow-hidden rounded-xl border"
+            style={{ borderColor: "var(--border)" }}
+          >
             <img
               src="/images/image.png"
-              alt="ClearBand AI Application Interface showing real-time spectrum analyzer and controls"
-              className="w-full"
+              alt="ClearBand AI interface — real-time spectrum analyzer, I/O routing, AI processing dial and output controls"
+              className="w-full block"
             />
           </div>
-          {/* Glow effect */}
-          <div className="pointer-events-none absolute -inset-4 rounded-2xl bg-amber-500/10 blur-3xl" />
+          {/* Amber glow under screenshot */}
+          <div
+            className="pointer-events-none absolute -bottom-8 left-1/2 -translate-x-1/2"
+            style={{
+              width: "80%",
+              height: 120,
+              background: "radial-gradient(ellipse at center, rgba(232,160,32,0.18) 0%, transparent 70%)",
+              filter: "blur(20px)",
+            }}
+          />
         </div>
       </div>
     </section>
