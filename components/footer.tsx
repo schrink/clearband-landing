@@ -15,19 +15,17 @@ export function Footer() {
 
           {/* Links */}
           <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-muted-foreground">
-            {["Privacy Policy", "Terms of Service", "Support", "Contact"].map((link) => (
-              <a key={link} href="#" className="transition-colors hover:text-foreground">
-                {link}
-              </a>
-            ))}
+            <a href="mailto:contact@clearbandai.app" className="transition-colors hover:text-foreground">
+              Contact
+            </a>
           </div>
 
-          <p className="text-xs text-muted-foreground">© 2025 ClearBand AI. All rights reserved.</p>
+          <p className="text-xs text-muted-foreground">© 2026 ClearBand AI. All rights reserved.</p>
         </div>
 
         <div className="mt-8 text-center">
           <p className="text-xs text-muted-foreground" style={{ letterSpacing: "0.05em" }}>
-            73 de ClearBand AI — Hear the signal, ignore the QRN.
+            73 de YU4VLR — Hear the signal, ignore the QRN.
           </p>
         </div>
       </div>
