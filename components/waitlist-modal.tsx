@@ -112,10 +112,12 @@ export function WaitlistModal() {
             <div className="text-center">
               <CheckCircle2 className="mx-auto mb-4 h-10 w-10 text-emerald-400" />
               <h2 id={titleId} className="text-2xl font-bold text-foreground">
-                {status === "exists" ? "You're already on the list" : "You're on the list"}
+                {status === "exists" ? "You're already locked in" : "Founding price locked in"}
               </h2>
               <p className="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-muted-foreground">
-                We'll email you when the 15-day free trial opens. No spam — just the launch signal.
+                You&apos;re set for{" "}
+                <strong className="text-foreground">$19 lifetime</strong> at launch
+                (regular $29) plus early trial access. We&apos;ll email you when it&apos;s ready.
               </p>
               <button
                 type="button"
@@ -133,18 +135,53 @@ export function WaitlistModal() {
                   className="mb-2 text-xs font-bold uppercase tracking-widest"
                   style={{ color: "var(--amber)" }}
                 >
-                  15-day free trial
+                  Founding operator offer
                 </p>
                 <h2 id={titleId} className="text-2xl font-bold text-foreground text-balance">
-                  Join the waitlist
+                  Lock in $19 at launch
                 </h2>
                 <p className="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-muted-foreground">
-                  Early access to ClearBand AI — studio-grade noise reduction, 100% offline.
-                  We'll notify you the moment the trial drops.
+                  Join now and skip the line — early access to the trial, plus a founding
+                  lifetime price when ClearBand drops.
                 </p>
               </div>
 
-              <form onSubmit={handleSubmit} className="mt-7 space-y-3">
+              {/* Incentive */}
+              <div
+                className="mt-6 rounded-xl border px-4 py-4"
+                style={{
+                  borderColor: "rgba(232,160,32,0.35)",
+                  backgroundColor: "rgba(232,160,32,0.08)",
+                }}
+              >
+                <div className="flex items-baseline justify-center gap-3">
+                  <span
+                    className="text-sm text-muted-foreground line-through"
+                    style={{ textDecorationThickness: "1.5px" }}
+                  >
+                    $29
+                  </span>
+                  <span className="text-4xl font-black tracking-tight" style={{ color: "var(--amber)" }}>
+                    $19
+                  </span>
+                  <span className="text-xs text-muted-foreground uppercase tracking-widest">
+                    lifetime
+                  </span>
+                </div>
+                <ul className="mt-3 space-y-1.5 text-center text-xs text-muted-foreground">
+                  <li>
+                    <span style={{ color: "var(--amber)" }}>✓</span> Save $10 vs launch price
+                  </li>
+                  <li>
+                    <span style={{ color: "var(--amber)" }}>✓</span> First in line for the 15-day trial
+                  </li>
+                  <li>
+                    <span style={{ color: "var(--amber)" }}>✓</span> No credit card to join
+                  </li>
+                </ul>
+              </div>
+
+              <form onSubmit={handleSubmit} className="mt-6 space-y-3">
                 <label htmlFor="waitlist-email" className="sr-only">
                   Email address
                 </label>
@@ -164,7 +201,6 @@ export function WaitlistModal() {
                   className="w-full rounded-lg border bg-transparent px-4 py-3.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none disabled:opacity-60"
                   style={{
                     borderColor: status === "error" ? "#C0392B" : "var(--border)",
-                    boxShadow: status === "error" ? "none" : "inset 0 0 0 1px transparent",
                   }}
                   onFocus={(e) => {
                     e.currentTarget.style.borderColor = "var(--amber)"
@@ -183,10 +219,10 @@ export function WaitlistModal() {
                   {status === "loading" ? (
                     <>
                       <Loader2 className="h-4 w-4 animate-spin" />
-                      Joining…
+                      Locking in…
                     </>
                   ) : (
-                    "Join Waitlist"
+                    "Claim $19 Founding Price"
                   )}
                 </button>
               </form>
@@ -196,7 +232,7 @@ export function WaitlistModal() {
               )}
 
               <p className="mt-5 text-center text-xs text-muted-foreground">
-                No credit card · Windows · macOS · Linux
+                Offer for waitlist members only · Windows · macOS · Linux
               </p>
             </>
           )}

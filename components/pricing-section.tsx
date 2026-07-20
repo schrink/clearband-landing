@@ -88,7 +88,7 @@ export function PricingSection() {
                 Start Free Trial
               </button>
               <p className="mt-3 text-center text-xs text-muted-foreground">
-                No credit card required to start
+                Waitlist members lock in <span style={{ color: "var(--amber)" }}>$19 founding price</span>
               </p>
             </div>
           </div>
