@@ -1,7 +1,32 @@
 import { Button } from "@/components/ui/button"
-import { Download, ArrowRight } from "lucide-react"
+import { Input } from "@/components/ui/input"
+import { Download, ArrowRight, Loader2, CheckCircle2 } from "lucide-react"
+import { useState, FormEvent } from "react"
 
 export function HeroSection() {
+  const [email, setEmail] = useState("")
+  const [subStatus, setSubStatus] = useState<"idle" | "loading" | "ok" | "error">("idle")
+
+  const handleWaitlist = async (e: FormEvent) => {
+    e.preventDefault()
+    setSubStatus("loading")
+    try {
+      const res = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      })
+      const data = await res.json()
+      if (res.ok) {
+        setSubStatus("ok")
+        setEmail("")
+      } else {
+        setSubStatus("error")
+      }
+    } catch {
+      setSubStatus("error")
+    }
+  }
   return (
     <section className="relative overflow-hidden pt-32 pb-20">
       <div className="absolute inset-0">
@@ -45,6 +70,43 @@ export function HeroSection() {
               Learn More
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
+          </div>
+
+          {/* Waitlist Email Capture */}
+          <div className="mt-8">
+            <form onSubmit={handleWaitlist} className="mx-auto flex max-w-md gap-3">
+              <Input
+                type="email"
+                placeholder="Enter your email for early access"
+                value={email}
+                onChange={(e) => { setEmail(e.target.value); setSubStatus("idle") }}
+                required
+                className="flex-1 border-border bg-card/50 text-foreground placeholder:text-muted-foreground"
+              />
+              <Button
+                type="submit"
+                disabled={subStatus === "loading" || subStatus === "ok"}
+                className="bg-amber-500 px-6 text-background hover:bg-amber-600 disabled:opacity-70"
+              >
+                {subStatus === "loading" ? (
+                  <Loader2 className="h-4 w-4 animate-spin" />
+                ) : subStatus === "ok" ? (
+                  <CheckCircle2 className="h-4 w-4" />
+                ) : (
+                  "Join Waitlist"
+                )}
+              </Button>
+            </form>
+            {subStatus === "ok" && (
+              <p className="mt-2 text-sm text-emerald-400">
+                ✓ You're on the list! We'll notify you when ClearBand launches.
+              </p>
+            )}
+            {subStatus === "error" && (
+              <p className="mt-2 text-sm text-red-400">
+                Something went wrong. Please try again.
+              </p>
+            )}
           </div>
 
           {/* Platform badges */}
