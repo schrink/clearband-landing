@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* ClearBand AI — warm dark brown / amber gold theme */
+  /* ClearBand AI - warm dark brown / amber gold theme */
   --background: #0D0900;
   --foreground: #F2ECD8;
   --card: #181100;

@@ -15,7 +15,7 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 async function notifySignup(email: string) {
   const apiKey = process.env.RESEND_API_KEY
   if (!apiKey) {
-    console.warn("RESEND_API_KEY not set — skipping waitlist email notify")
+    console.warn("RESEND_API_KEY not set - skipping waitlist email notify")
     return
   }
 
@@ -79,7 +79,7 @@ export async function POST(request: NextRequest) {
 
     await redis.hset("waitlist:emails", { [email]: Date.now() })
 
-    // Fire-and-forget notify — don't fail the signup if email breaks
+    // Fire-and-forget notify - don't fail the signup if email breaks
     void notifySignup(email).catch((err) => {
       console.error("Waitlist notify error:", err)
     })

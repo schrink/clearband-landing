@@ -16,7 +16,7 @@ const features = [
   {
     icon: BarChart3,
     title: "Dual-View Spectrum",
-    description: "Input vs. Output waterfall — see exactly what the AI strips away.",
+    description: "Input vs. Output waterfall - see exactly what the AI strips away.",
   },
   {
     icon: SlidersHorizontal,
@@ -26,17 +26,17 @@ const features = [
   {
     icon: Radio,
     title: "Auto-Notch Filter",
-    description: "Instantly kills carriers, tuners, and heterodynes — hands free.",
+    description: "Instantly kills carriers, tuners, and heterodynes - hands free.",
   },
   {
     icon: Waves,
     title: "Spectral Subtraction",
-    description: "Drops broadband hiss 6–10 dB before the AI stage for maximum gain.",
+    description: "Drops broadband hiss 6-10 dB before the AI stage for maximum gain.",
   },
   {
     icon: Settings,
     title: "Voice Boost EQ",
-    description: "Psychoacoustic curve at 2.5 kHz — Heil-style intelligibility lift.",
+    description: "Psychoacoustic curve at 2.5 kHz - Heil-style intelligibility lift.",
   },
   {
     icon: Shield,

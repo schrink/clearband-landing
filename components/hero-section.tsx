@@ -47,7 +47,7 @@ export function HeroSection() {
         {/* Subheadline */}
         <p className="mx-auto mt-6 max-w-xl text-center text-base leading-relaxed text-muted-foreground sm:text-lg">
           The first&nbsp;<strong className="text-foreground font-medium">Hybrid&nbsp;Chain</strong> audio processor
-          for Amateur Radio. Studio-grade noise reduction, local AI transcription, and surgical DSP—running entirely on your PC.
+          for Amateur Radio. Studio-grade noise reduction, local AI transcription, and surgical DSP - running entirely on your PC.
         </p>
 
         {/* CTAs */}
@@ -80,7 +80,7 @@ export function HeroSection() {
           >
             <img
               src="/images/image.png"
-              alt="ClearBand AI interface — real-time spectrum analyzer, I/O routing, AI processing dial and output controls"
+              alt="ClearBand AI interface - real-time spectrum analyzer, I/O routing, AI processing dial and output controls"
               className="w-full block"
             />
           </div>

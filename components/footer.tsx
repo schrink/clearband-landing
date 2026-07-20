@@ -25,7 +25,7 @@ export function Footer() {
 
         <div className="mt-8 text-center">
           <p className="text-xs text-muted-foreground" style={{ letterSpacing: "0.05em" }}>
-            73 de YU4VLR — Hear the signal, ignore the QRN.
+            73 de YU4VLR - Hear the signal, ignore the QRN.
           </p>
         </div>
       </div>

@@ -1,6 +1,6 @@
 const testimonials = [
   {
-    quote: "Finally pulled JT65 out of S9 noise. This thing is magic on 160m. I've tried everything — this is the one that actually works.",
+    quote: "Finally pulled JT65 out of S9 noise. This thing is magic on 160m. I've tried everything - this is the one that actually works.",
     author: "K3ABC",
     location: "Pennsylvania, USA",
     avatar: "/amateur-radio-operator-older-man-headphones.jpg",

@@ -16,7 +16,7 @@ const useCases = [
   {
     title: "For POTA / SOTA",
     description:
-      'Eco Mode sips just 3% CPU — runs all day on a field laptop. Pack light, hear everything.',
+      'Eco Mode sips just 3% CPU - runs all day on a field laptop. Pack light, hear everything.',
     image: "/portable-ham-radio-qrp-setup-outdoor-nature-mounta.jpg",
     tag: "Portable Ops",
   },

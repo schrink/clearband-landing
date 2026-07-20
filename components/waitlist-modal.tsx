@@ -141,7 +141,7 @@ export function WaitlistModal() {
                   Lock in $19 at launch
                 </h2>
                 <p className="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-muted-foreground">
-                  Join now and skip the line — early access to the trial, plus a founding
+                  Join now and skip the line - early access to the trial, plus a founding
                   lifetime price when ClearBand drops.
                 </p>
               </div>

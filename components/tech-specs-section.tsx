@@ -54,7 +54,7 @@ export function TechSpecsSection() {
           className="mt-10 rounded-xl border p-6 text-center"
           style={{ borderColor: "rgba(60,200,100,0.25)", backgroundColor: "rgba(50,180,90,0.05)" }}
         >
-          <p className="text-sm font-semibold text-foreground mb-1">Privacy First — 100% Local Processing</p>
+          <p className="text-sm font-semibold text-foreground mb-1">Privacy First - 100% Local Processing</p>
           <p className="text-xs text-muted-foreground max-w-lg mx-auto">
             ClearBand AI does not collect audio data. Every byte of your signal stays on your machine. No telemetry, no accounts, no cloud.
           </p>
