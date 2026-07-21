@@ -51,14 +51,20 @@ export function Navbar() {
 
         {/* CTA */}
         <div className="hidden md:flex items-center gap-4">
-          <span className="text-xs text-muted-foreground">15-day free trial</span>
+          <span
+            className="flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-bold uppercase tracking-widest"
+            style={{ color: "#3DC87A", border: "1px solid rgba(60,200,120,0.35)", backgroundColor: "rgba(60,200,120,0.08)" }}
+          >
+            <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "#3DC87A" }} />
+            Core free forever
+          </span>
           <button
             type="button"
             onClick={openWaitlist}
             className="rounded px-4 py-2 text-xs font-bold uppercase tracking-widest transition-opacity hover:opacity-90"
             style={{ backgroundColor: "var(--amber)", color: "#0D0900" }}
           >
-            Start Free Trial
+            Download Free
           </button>
         </div>
       </div>
