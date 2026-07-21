@@ -30,9 +30,9 @@ export function SocialProof() {
           Real operator stories coming soon
         </h2>
         <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
-          We&apos;re collecting notes from early testers once the trial opens.
-          Join the waitlist and you&apos;ll be among the first to try ClearBand AI
-          and lock in the founding price.
+          We&apos;re collecting notes from early testers running the full hear-understand-log
+          workflow once the trial opens. Join the waitlist to be among the first to build your
+          cockpit and lock in the founding price.
         </p>
         <button
           type="button"

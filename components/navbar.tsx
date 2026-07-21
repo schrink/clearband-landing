@@ -34,8 +34,8 @@ export function Navbar() {
         {/* Nav links */}
         <nav className="hidden md:flex items-center gap-8">
           {[
-            ["Features", "#features"],
-            ["How It Works", "#how-it-works"],
+            ["Workflow", "#workflow"],
+            ["Plugins", "#plugins"],
             ["Pricing", "#pricing"],
             ["Specs", "#specs"],
           ].map(([label, href]) => (

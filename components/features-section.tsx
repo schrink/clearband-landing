@@ -1,22 +1,22 @@
 "use client"
 
-import { Zap, FileText, BarChart3, SlidersHorizontal, Shield, Radio, Settings, Waves } from "lucide-react"
+import { Zap, BarChart3, SlidersHorizontal, Radio, Settings, Waves } from "lucide-react"
 
 const features = [
   {
     icon: Zap,
-    title: "Zero-Cloud Latency",
-    description: "Processed locally. Latency as low as 35ms. No audio ever leaves your machine.",
+    title: "Real-Time Engine",
+    description: "Processed locally with latency as low as 35ms - fast enough to sit in your live receive path.",
   },
   {
-    icon: FileText,
-    title: "AI Voice Transcription",
-    description: "Offline speech recognition captures callsigns in real time during pile-ups.",
+    icon: Radio,
+    title: "AI Noise Reduction",
+    description: "RNNoise and DeepFilterNet crush QRN and hiss. It is the clean feed the rest of the cockpit relies on.",
   },
   {
     icon: BarChart3,
     title: "Dual-View Spectrum",
-    description: "Input vs. Output waterfall - see exactly what the AI strips away.",
+    description: "Input vs. output waterfall - see exactly what the engine strips away.",
   },
   {
     icon: SlidersHorizontal,
@@ -24,40 +24,34 @@ const features = [
     description: "Blend raw signal back in to restore presence while keeping noise crushed.",
   },
   {
-    icon: Radio,
-    title: "Auto-Notch Filter",
-    description: "Instantly kills carriers, tuners, and heterodynes - hands free.",
-  },
-  {
     icon: Waves,
-    title: "Spectral Subtraction",
-    description: "Drops broadband hiss before the AI stage for maximum clean gain.",
+    title: "Auto-Notch & Spectral Subtraction",
+    description: "Kills carriers and broadband hiss before the AI stage for maximum clean gain.",
   },
   {
     icon: Settings,
     title: "Voice Boost EQ",
     description: "Psychoacoustic curve at 2.5 kHz - Heil-style intelligibility lift.",
   },
-  {
-    icon: Shield,
-    title: "100% Offline",
-    description: "No cloud, no telemetry. Your QSOs stay private.",
-  },
 ]
 
 export function FeaturesSection() {
   return (
-    <section id="features" className="py-24 border-t border-border" style={{ backgroundColor: "#0D0900" }}>
+    <section id="foundation" className="py-24 border-t border-border" style={{ backgroundColor: "#0D0900" }}>
       <div className="mx-auto max-w-6xl px-6">
         {/* Section label */}
         <p className="text-center text-xs font-bold uppercase tracking-widest mb-4" style={{ color: "var(--amber)" }}>
-          Key Features
+          The Foundation
         </p>
         <h2 className="text-center text-3xl font-bold text-foreground sm:text-4xl text-balance">
-          Engineered for the Modern Shack
+          A rock-solid audio engine under everything
         </h2>
+        <p className="mt-4 text-center text-sm text-muted-foreground max-w-xl mx-auto">
+          Great transcription and logging start with a clean signal. ClearBand&apos;s DSP and AI noise
+          reduction are the dependable base the plugin cockpit is built on - not the whole story.
+        </p>
 
-        <div className="mt-14 grid gap-px sm:grid-cols-2 lg:grid-cols-4 rounded-xl overflow-hidden border border-border">
+        <div className="mt-14 grid gap-px sm:grid-cols-2 lg:grid-cols-3 rounded-xl overflow-hidden border border-border">
           {features.map((feature) => (
             <div
               key={feature.title}

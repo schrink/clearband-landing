@@ -13,7 +13,7 @@ const specGroups = [
   },
   {
     title: "Hardware Requirements",
-    items: ["CPU: Intel i3 / Ryzen 3 (2018+)", "RAM: 4 GB minimum", "Storage: 600 MB for models", "GPU: Not required"],
+    items: ["CPU: Intel i3 / Ryzen 3 (2018+)", "RAM: 4 GB minimum", "Storage: ~1 GB for AI + Whisper models", "GPU: Not required"],
   },
 ]
 
@@ -54,9 +54,10 @@ export function TechSpecsSection() {
           className="mt-10 rounded-xl border p-6 text-center"
           style={{ borderColor: "rgba(60,200,100,0.25)", backgroundColor: "rgba(50,180,90,0.05)" }}
         >
-          <p className="text-sm font-semibold text-foreground mb-1">Privacy First - 100% Local Processing</p>
+          <p className="text-sm font-semibold text-foreground mb-1">Local-First by design</p>
           <p className="text-xs text-muted-foreground max-w-lg mx-auto">
-            ClearBand AI does not collect audio data. Every byte of your signal stays on your machine. No telemetry, no accounts, no cloud.
+            Your audio, transcripts, and logbook never leave your machine. Only the opt-in DX Cluster and
+            QRZ.com plugins reach the internet - and only after you turn them on.
           </p>
         </div>
       </div>

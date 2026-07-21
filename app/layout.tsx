@@ -9,10 +9,10 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://clearbandai.app"),
-  title: "ClearBand AI - Hear the Signal, Ignore the QRN",
+  title: "ClearBand AI - The Amateur Radio AI Cockpit",
   description:
-    "The first Hybrid Chain audio processor for Amateur Radio. Studio-grade noise reduction, local AI transcription, and surgical DSP - running entirely on your PC. $29 lifetime license.",
-  keywords: ["amateur radio", "ham radio", "noise reduction", "DSP", "AI audio", "QRN", "DX", "ClearBand"],
+    "ClearBand is the AI cockpit for Amateur Radio: a local audio engine plus a plugin ecosystem that transcribes, extracts callsigns, and logs contacts automatically. Core DSP, Whisper transcripts, and DXCC lookups stay on your PC. $29 lifetime license.",
+  keywords: ["amateur radio", "ham radio", "logbook", "ADIF", "callsign", "Whisper transcription", "DXCC", "noise reduction", "DSP", "AI audio", "DX", "ClearBand"],
   robots: {
     index: true,
     follow: true,
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
     apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
   },
   openGraph: {
-    title: "ClearBand AI - Hear the Signal, Ignore the QRN",
+    title: "ClearBand AI - The Amateur Radio AI Cockpit",
     description:
-      "Hybrid Chain audio processor for Amateur Radio. Studio-grade noise reduction, local AI transcription, and surgical DSP - 100% offline. $29 lifetime license.",
+      "Hear what you've been missing. Understand who is calling. Log it automatically. A local audio engine plus a plugin ecosystem for Amateur Radio. $29 lifetime license.",
     url: "https://clearbandai.app",
     siteName: "ClearBand AI",
     images: [
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "ClearBand AI - Hear the signal, ignore the QRN",
+        alt: "ClearBand AI - the Amateur Radio AI Cockpit",
       },
     ],
     locale: "en_US",
@@ -54,9 +54,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ClearBand AI - Hear the Signal, Ignore the QRN",
+    title: "ClearBand AI - The Amateur Radio AI Cockpit",
     description:
-      "Hybrid Chain audio processor for Amateur Radio. Studio-grade noise reduction, local AI transcription, and surgical DSP - 100% offline.",
+      "Hear what you've been missing. Understand who is calling. Log it automatically. A local audio engine plus a plugin ecosystem for Amateur Radio.",
     images: ["/og.png"],
   },
 }

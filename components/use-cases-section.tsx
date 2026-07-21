@@ -2,21 +2,21 @@ const useCases = [
   {
     title: "For DX Chasers",
     description:
-      "Pull weak signals out of the mud that are invisible on the waterfall. The AI reconstructs voice harmonics even at S3.",
+      "Hear weak callers the waterfall hides, then let the transcript catch the callsign and resolve the DXCC entity before you even key up.",
     image: "/high-end-hf-transceiver-icom-ic-7851-radio-dark-ba.jpg",
     tag: "DX / HF",
   },
   {
     title: "For Contesters",
     description:
-      "Reduce ear fatigue across 48-hour runs. The noise floor drops so far you can hear callsigns in the sideband splatter.",
+      "Keep both hands on the run. Callsigns are transcribed and pushed to your log automatically, so a 48-hour marathon stays fast and accurate.",
     image: "/contest-station-multiple-monitors-radio-equipment-.jpg",
     tag: "Contesting",
   },
   {
     title: "For POTA / SOTA",
     description:
-      'Fast & Efficient sips just 3% CPU - runs all day on a field laptop. Pack light, hear everything.',
+      "A lightweight engine and a local logbook run all day on a field laptop - no signal on the trail needed to keep a clean, complete log.",
     image: "/portable-ham-radio-qrp-setup-outdoor-nature-mounta.jpg",
     tag: "Portable Ops",
   },
@@ -30,8 +30,12 @@ export function UseCasesSection() {
           Use Cases
         </p>
         <h2 className="text-center text-3xl font-bold text-foreground sm:text-4xl text-balance">
-          Whether you&apos;re at home or in the field
+          Built for operators who run a complete workflow
         </h2>
+        <p className="mt-4 text-center text-sm text-muted-foreground max-w-xl mx-auto">
+          Not just an audio cable patch. ClearBand is for serious operators who want the whole loop -
+          hear, understand, and log - handled in one place.
+        </p>
 
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {useCases.map((useCase) => (

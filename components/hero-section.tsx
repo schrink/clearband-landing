@@ -18,9 +18,32 @@ export function HeroSection() {
       />
 
       <div className="relative mx-auto max-w-6xl px-6">
+        {/* Eyebrow */}
+        <p className="mb-6 text-center text-xs font-bold uppercase tracking-[0.25em]" style={{ color: "var(--amber)" }}>
+          The Amateur Radio AI Cockpit
+        </p>
+
+        {/* Headline / tagline */}
+        <h1 className="text-center text-balance font-bold leading-tight text-foreground" style={{ fontSize: "clamp(2.25rem, 5.2vw, 4rem)" }}>
+          Hear what you&apos;ve been missing.
+          <br />
+          <span className="text-foreground/90">Understand who is calling.</span>
+          <br />
+          <em className="not-italic font-bold" style={{ color: "var(--amber)", fontFamily: "Georgia, serif", fontStyle: "italic" }}>
+            Log it automatically.
+          </em>
+        </h1>
+
+        {/* Subheadline */}
+        <p className="mx-auto mt-7 max-w-2xl text-center text-base leading-relaxed text-muted-foreground sm:text-lg">
+          ClearBand is a complete AI cockpit for the modern shack - a real-time audio engine with a
+          plugin ecosystem that <strong className="text-foreground font-medium">transcribes, identifies, and logs</strong> every
+          contact. Studio-grade noise reduction is just the foundation.
+        </p>
+
         {/* Trust line */}
-        <div className="mb-8 flex items-center justify-center gap-0">
-          {["No Subscriptions", "No Cloud", "100% Offline"].map((item, i) => (
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-0">
+          {["Core DSP runs offline", "Transcripts stay local", "No subscriptions"].map((item, i) => (
             <span key={item} className="flex items-center">
               {i > 0 && (
                 <span className="mx-3 h-3 w-px block" style={{ backgroundColor: "rgba(232,160,32,0.3)" }} />
@@ -35,21 +58,6 @@ export function HeroSection() {
           ))}
         </div>
 
-        {/* Headline */}
-        <h1 className="text-center text-balance font-bold leading-tight text-foreground" style={{ fontSize: "clamp(2.5rem, 6vw, 4.5rem)" }}>
-          Hear the signal,
-          <br />
-          <em className="not-italic font-bold" style={{ color: "var(--amber)", fontFamily: "Georgia, serif", fontStyle: "italic" }}>
-            ignore the QRN.
-          </em>
-        </h1>
-
-        {/* Subheadline */}
-        <p className="mx-auto mt-6 max-w-xl text-center text-base leading-relaxed text-muted-foreground sm:text-lg">
-          The first&nbsp;<strong className="text-foreground font-medium">Hybrid&nbsp;Chain</strong> audio processor
-          for Amateur Radio. Studio-grade noise reduction, local AI transcription, and surgical DSP - running entirely on your PC.
-        </p>
-
         {/* CTAs */}
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <button
@@ -61,11 +69,11 @@ export function HeroSection() {
             Start Free Trial
           </button>
           <a
-            href="#how-it-works"
+            href="#workflow"
             className="rounded border px-8 py-3 text-sm font-medium text-foreground transition-colors hover:border-foreground/50"
             style={{ borderColor: "var(--border)" }}
           >
-            Learn More
+            See the Workflow
           </a>
         </div>
         <p className="mt-3 text-center text-xs text-muted-foreground">
@@ -80,7 +88,7 @@ export function HeroSection() {
           >
             <img
               src="/images/image.png"
-              alt="ClearBand AI interface - real-time spectrum analyzer, I/O routing, AI processing dial and output controls"
+              alt="ClearBand AI Lab - plugin workspace showing the transcription, callsign extraction and auto-logbook pipeline alongside the audio engine"
               className="w-full block"
             />
           </div>
