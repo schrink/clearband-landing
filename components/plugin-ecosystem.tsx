@@ -5,8 +5,8 @@ import { FileText, ScanSearch, BookMarked, Globe2, Radio, Wifi } from "lucide-re
 const plugins = [
   {
     icon: FileText,
-    title: "Whisper Transcription",
-    description: "A local Whisper model captures every over as searchable text - no cloud, no upload.",
+    title: "Voice Transcription",
+    description: "A local speech-to-text model captures every over as searchable text - no cloud, no upload.",
     connectivity: "local",
   },
   {

@@ -13,7 +13,7 @@ const specGroups = [
   },
   {
     title: "Hardware Requirements",
-    items: ["CPU: Intel i3 / Ryzen 3 (2018+)", "RAM: 4 GB minimum", "Storage: ~1 GB for AI + Whisper models", "GPU: Not required"],
+    items: ["CPU: Intel i3 / Ryzen 3 (2018+)", "RAM: 4 GB minimum", "Storage: ~1 GB for AI + transcription models", "GPU: Not required"],
   },
 ]
 

@@ -10,7 +10,7 @@ const steps = [
     number: "02",
     title: "Transcribe locally",
     description:
-      "A local Whisper model turns the cleaned audio into text in real time. Nothing is uploaded - the transcript never leaves your machine.",
+      "A local speech-to-text model turns the cleaned audio into text in real time. Nothing is uploaded - the transcript never leaves your machine.",
     local: true,
   },
   {
@@ -31,7 +31,7 @@ const steps = [
 
 const flow = [
   { label: "Audio", tone: "amber" },
-  { label: "Whisper Transcription", tone: "muted" },
+  { label: "Local Transcription", tone: "muted" },
   { label: "Callsign Extraction", tone: "muted" },
   { label: "Auto Logbook", tone: "green" },
 ]

@@ -13,7 +13,7 @@ const coreFeatures = [
 
 const proFeatures = [
   "Everything in Core",
-  "Local Whisper offline transcription",
+  "Local offline voice transcription",
   "Real-time callsign extraction from audio",
   "Offline DXCC callsign resolution",
   "Auto-logbook with ADIF export",

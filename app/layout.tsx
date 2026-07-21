@@ -11,8 +11,8 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://clearbandai.app"),
   title: "ClearBand AI - The Amateur Radio AI Cockpit",
   description:
-    "ClearBand is the AI cockpit for Amateur Radio: a local audio engine plus a plugin ecosystem that transcribes, extracts callsigns, and logs contacts automatically. Core DSP, Whisper transcripts, and DXCC lookups stay on your PC. $29 lifetime license.",
-  keywords: ["amateur radio", "ham radio", "logbook", "ADIF", "callsign", "Whisper transcription", "DXCC", "noise reduction", "DSP", "AI audio", "DX", "ClearBand"],
+    "ClearBand is the AI cockpit for Amateur Radio: a local audio engine plus a plugin ecosystem that transcribes, extracts callsigns, and logs contacts automatically. Core DSP, transcripts, and DXCC lookups stay on your PC. $29 lifetime license.",
+  keywords: ["amateur radio", "ham radio", "logbook", "ADIF", "callsign", "voice transcription", "DXCC", "noise reduction", "DSP", "AI audio", "DX", "ClearBand"],
   robots: {
     index: true,
     follow: true,

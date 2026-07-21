@@ -2,7 +2,7 @@ import { Lock, Globe2 } from "lucide-react"
 
 const local = [
   "Core DSP & AI noise reduction",
-  "Whisper voice transcripts",
+  "Voice transcripts",
   "Callsign extraction",
   "DXCC entity lookups",
   "Your ADIF logbook",
